@@ -1,0 +1,213 @@
+2020-12-02 15:06:20,381: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture X86.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture ARMCortexM.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture S390X.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture PPC32.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture AMD64.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture ARMHF.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture MIPS32.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture ARMEL.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture AARCH64.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture PPC64.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture ARM.
+2020-12-02 15:06:20,382: pyvex.lifting:DEBUG: Registering lifter LibVEXLifter for architecture MIPS64.
+2020-12-02 15:06:20,394: pyvex.lifting:DEBUG: Registering lifter ARMSpotter for architecture ARM.
+2020-12-02 15:06:20,395: pyvex.lifting:DEBUG: Registering lifter ARMSpotter for architecture ARMEL.
+2020-12-02 15:06:20,395: pyvex.lifting:DEBUG: Registering lifter ARMSpotter for architecture ARMHF.
+2020-12-02 15:06:20,395: pyvex.lifting:DEBUG: Registering lifter ARMSpotter for architecture ARMCortexM.
+2020-12-02 15:06:20,396: pyvex.lifting:DEBUG: Registering lifter AARCH64Spotter for architecture ARM64.
+2020-12-02 15:06:20,396: pyvex.lifting:DEBUG: Registering lifter AARCH64Spotter for architecture AARCH64.
+2020-12-02 15:06:20,732: claripy.backend:DEBUG: Operation StringV not in op_module <module 'claripy.bv' from '/usr/local/lib/python3.9/site-packages/claripy/bv.py'>.
+2020-12-02 15:06:20,732: claripy.backend:DEBUG: Operation FPV not in op_module <module 'claripy.bv' from '/usr/local/lib/python3.9/site-packages/claripy/bv.py'>.
+2020-12-02 15:06:20,732: claripy.backend:DEBUG: Operation FPS not in op_module <module 'claripy.fp' from '/usr/local/lib/python3.9/site-packages/claripy/fp.py'>.
+2020-12-02 15:06:20,732: claripy.backend:DEBUG: Operation RotateLeft not in op_module <class 'claripy.backends.backend_vsa.BackendVSA'>.
+2020-12-02 15:06:20,732: claripy.backend:DEBUG: Operation RotateRight not in op_module <class 'claripy.backends.backend_vsa.BackendVSA'>.
+2020-12-02 15:06:20,774: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: armel
+2020-12-02 15:06:20,780: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: arm_cortex_m
+2020-12-02 15:06:20,781: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: i386
+2020-12-02 15:06:20,782: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: mips64
+2020-12-02 15:06:20,782: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: arm64
+2020-12-02 15:06:20,784: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: s390x
+2020-12-02 15:06:20,785: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: generic
+2020-12-02 15:06:20,785: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: ppc
+2020-12-02 15:06:20,786: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: elfreloc
+2020-12-02 15:06:20,786: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: arm
+2020-12-02 15:06:20,787: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: mips
+2020-12-02 15:06:20,787: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: armhf
+2020-12-02 15:06:20,788: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: pcc64
+2020-12-02 15:06:20,789: cle.backends.elf.relocation:DEBUG: Importing ELF relocation module: amd64
+2020-12-02 15:06:20,798: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: i386
+2020-12-02 15:06:20,801: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: riscv
+2020-12-02 15:06:20,802: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: generic
+2020-12-02 15:06:20,802: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: arm
+2020-12-02 15:06:20,802: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: mips
+2020-12-02 15:06:20,803: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: amd64
+2020-12-02 15:06:20,804: cle.backends.pe.relocation:DEBUG: Importing PE relocation module: pereloc
+2020-12-02 15:06:20,823: cle.backends.binja:INFO: Unable to import binaryninja module
+2020-12-02 15:06:21,094: angr.engines.vex.claripy.irop:DEBUG: 1004 matched (613 supported) and 56 unmatched operations
+2020-12-02 15:06:21,108: angr.state_plugins.unicorn_engine:INFO: native plugin is enabled
+2020-12-02 15:06:21,141: angr.misc.autoimport:DEBUG: Loading angr.procedures.java_jni
+2020-12-02 15:06:21,156: angr.misc.autoimport:DEBUG: Loading angr.procedures.cgc
+2020-12-02 15:06:21,162: angr.misc.autoimport:DEBUG: Loading angr.procedures.tracer
+2020-12-02 15:06:21,168: angr.misc.autoimport:DEBUG: Loading angr.procedures.stubs
+2020-12-02 15:06:21,181: angr.misc.autoimport:DEBUG: Loading angr.procedures.posix
+2020-12-02 15:06:21,216: angr.misc.autoimport:DEBUG: Loading angr.procedures.libc
+2020-12-02 15:06:21,261: angr.misc.autoimport:DEBUG: Loading angr.procedures.uclibc
+2020-12-02 15:06:21,265: angr.misc.autoimport:DEBUG: Loading angr.procedures.ntdll
+2020-12-02 15:06:21,267: angr.misc.autoimport:DEBUG: Not a module: __init__.py
+2020-12-02 15:06:21,267: angr.misc.autoimport:DEBUG: Loading angr.procedures.java
+2020-12-02 15:06:21,269: angr.misc.autoimport:DEBUG: Loading angr.procedures.java_lang
+2020-12-02 15:06:21,277: angr.misc.autoimport:DEBUG: Loading angr.procedures.linux_kernel
+2020-12-02 15:06:21,808: angr.misc.autoimport:DEBUG: Loading angr.procedures.testing
+2020-12-02 15:06:21,810: angr.misc.autoimport:DEBUG: Loading angr.procedures.advapi32
+2020-12-02 15:06:21,811: angr.misc.autoimport:DEBUG: Loading angr.procedures.msvcr
+2020-12-02 15:06:21,814: angr.misc.autoimport:DEBUG: Loading angr.procedures.glibc
+2020-12-02 15:06:21,820: angr.misc.autoimport:DEBUG: Loading angr.procedures.libstdcpp
+2020-12-02 15:06:21,825: angr.misc.autoimport:DEBUG: Loading angr.procedures.java_util
+2020-12-02 15:06:21,831: angr.misc.autoimport:DEBUG: Loading angr.procedures.win32
+2020-12-02 15:06:21,847: angr.misc.autoimport:DEBUG: Loading angr.procedures.linux_loader
+2020-12-02 15:06:21,853: angr.misc.autoimport:DEBUG: Loading angr.procedures.win_user32
+2020-12-02 15:06:21,856: angr.misc.autoimport:DEBUG: Not a module: procedure_dict.py
+2020-12-02 15:06:21,856: angr.misc.autoimport:DEBUG: Loading angr.procedures.java_io
+2020-12-02 15:06:21,922: angr.procedures.definitions.glibc:DEBUG: Libc provides 1107 function prototypes, and has 406 unsupported function prototypes.
+2020-12-02 15:06:22,210: angr.project:INFO: Loading binary /Users/th/source/dy_re/decode_init_0/src/libcms.so
+2020-12-02 15:06:22,216: cle.loader:DEBUG: ... using full path /Users/th/source/dy_re/decode_init_0/src/libcms.so
+2020-12-02 15:06:22,222: cle.loader:DEBUG: ... loading with <class 'cle.backends.elf.elf.ELF'>
+2020-12-02 15:06:22,283: cle.loader:INFO: Loading liblog.so...
+2020-12-02 15:06:22,284: cle.loader:INFO: ... not found
+2020-12-02 15:06:22,284: cle.loader:INFO: Loading libstdc++.so...
+2020-12-02 15:06:22,284: cle.loader:INFO: ... not found
+2020-12-02 15:06:22,284: cle.loader:INFO: Loading libc.so...
+2020-12-02 15:06:22,285: cle.loader:INFO: ... not found
+2020-12-02 15:06:22,285: cle.loader:INFO: Loading libm.so...
+2020-12-02 15:06:22,285: cle.loader:INFO: ... not found
+2020-12-02 15:06:22,285: cle.loader:INFO: Loading libdl.so...
+2020-12-02 15:06:22,286: cle.loader:INFO: ... not found
+2020-12-02 15:06:22,286: cle.loader:INFO: Linking /Users/th/source/dy_re/decode_init_0/src/libcms.so
+2020-12-02 15:06:22,287: cle.backends.relocation:DEBUG: JNI_OnLoad from libcms.so resolved by JNI_OnLoad from libcms.so at 0x4519
+2020-12-02 15:06:22,287: cle.backends.relocation:DEBUG: N2mL4kS9gZ1jM9oF2hS from libcms.so resolved by N2mL4kS9gZ1jM9oF2hS from libcms.so at 0x8f010
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: Q6hV9tA4eN2uB3rF8dH from libcms.so resolved by Q6hV9tA4eN2uB3rF8dH from libcms.so at 0x8f080
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: L6zI1cP2nS7jJ2fD0fW from libcms.so resolved by L6zI1cP2nS7jJ2fD0fW from libcms.so at 0x8f0c0
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: D7tD0dO6zI6xG6gN1dT from libcms.so resolved by D7tD0dO6zI6xG6gN1dT from libcms.so at 0x8f0e0
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: Z1gF4xI0zP3mH0pW1vK from libcms.so resolved by Z1gF4xI0zP3mH0pW1vK from libcms.so at 0x8f0e4
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: A3jX1hG2fJ7gN8wM2eB from libcms.so resolved by A3jX1hG2fJ7gN8wM2eB from libcms.so at 0x8f130
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: Q6jE2yE7cT4wO0eU6rE from libcms.so resolved by Q6jE2yE7cT4wO0eU6rE from libcms.so at 0x8f12c
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: W8qO0mU2xY9zP8lI8gA from libcms.so resolved by W8qO0mU2xY9zP8lI8gA from libcms.so at 0x8f140
+2020-12-02 15:06:22,288: cle.backends.externs:INFO: Created extern symbol for environ
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: environ from libcms.so resolved by environ from extern-address space at 0x0
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: Z3qF8sM2mG8jL3oD4wX from libcms.so resolved by Z3qF8sM2mG8jL3oD4wX from libcms.so at 0x8f160
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: E7nZ4tY0xR9yC2qJ4vP from libcms.so resolved by E7nZ4tY0xR9yC2qJ4vP from libcms.so at 0x8f340
+2020-12-02 15:06:22,288: cle.backends.relocation:DEBUG: B2wP5kO9xG9hM7wA6uL from libcms.so resolved by B2wP5kO9xG9hM7wA6uL from libcms.so at 0x8f354
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: N2mM4bN2pF2hX1hI9rN from libcms.so resolved by N2mM4bN2pF2hX1hI9rN from libcms.so at 0x8f36c
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: T5rI1oW2tH1aB3hJ8xO from libcms.so resolved by T5rI1oW2tH1aB3hJ8xO from libcms.so at 0x8f380
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: Z1xK7qS5wA8kG3cY8kP from libcms.so resolved by Z1xK7qS5wA8kG3cY8kP from libcms.so at 0x8f378
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: G3gN1wY4wP4fO4fQ1oT from libcms.so resolved by G3gN1wY4wP4fO4fQ1oT from libcms.so at 0x8f388
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: P0aK6yF4yP1aC0gD3jH from libcms.so resolved by P0aK6yF4yP1aC0gD3jH from libcms.so at 0x8f390
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: A7tY8dT8aJ4nP1dO5kT from libcms.so resolved by A7tY8dT8aJ4nP1dO5kT from libcms.so at 0x8f550
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: W2uP4zJ9jT2kS6wU1wP from libcms.so resolved by W2uP4zJ9jT2kS6wU1wP from libcms.so at 0x8f658
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: W8wN4aP2tS7cT7hE9yY from libcms.so resolved by W8wN4aP2tS7cT7hE9yY from libcms.so at 0x8f660
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: G7kM0fX3fV5bR9kV0uS from libcms.so resolved by G7kM0fX3fV5bR9kV0uS from libcms.so at 0x8f720
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: W7sS8gV1kK8aQ9dF6tI from libcms.so resolved by W7sS8gV1kK8aQ9dF6tI from libcms.so at 0x8f734
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: D1aR0cW5lL3cI0mB1nG from libcms.so resolved by D1aR0cW5lL3cI0mB1nG from libcms.so at 0x8f750
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: S9nV4gX1fH7gY1sR9bK from libcms.so resolved by S9nV4gX1fH7gY1sR9bK from libcms.so at 0x8f798
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: O5vB1jC7pL7rH5gW9lO from libcms.so resolved by O5vB1jC7pL7rH5gW9lO from libcms.so at 0x8f910
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: N4oA2dO5hG9oI7xQ4gG from libcms.so resolved by N4oA2dO5hG9oI7xQ4gG from libcms.so at 0x8f970
+2020-12-02 15:06:22,289: cle.backends.relocation:DEBUG: R3lB2aG8cX4eT0xR3oG from libcms.so resolved by R3lB2aG8cX4eT0xR3oG from libcms.so at 0x8f964
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __cxa_finalize
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __cxa_finalize from libcms.so resolved by __cxa_finalize from extern-address space at 0x4
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __aeabi_memclr4
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __aeabi_memclr4 from libcms.so resolved by __aeabi_memclr4 from extern-address space at 0x8
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __stack_chk_fail
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __stack_chk_fail from libcms.so resolved by __stack_chk_fail from extern-address space at 0xc
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __aeabi_memcpy
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __aeabi_memcpy from libcms.so resolved by __aeabi_memcpy from extern-address space at 0x10
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __aeabi_memclr
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __aeabi_memclr from libcms.so resolved by __aeabi_memclr from extern-address space at 0x14
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __errno
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __errno from libcms.so resolved by __errno from extern-address space at 0x18
+2020-12-02 15:06:22,290: cle.backends.externs:INFO: Created extern symbol for __system_property_find
+2020-12-02 15:06:22,290: cle.backends.relocation:DEBUG: __system_property_find from libcms.so resolved by __system_property_find from extern-address space at 0x1c
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for __system_property_read
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: __system_property_read from libcms.so resolved by __system_property_read from extern-address space at 0x20
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for __aeabi_memclr8
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: __aeabi_memclr8 from libcms.so resolved by __aeabi_memclr8 from extern-address space at 0x24
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for __aeabi_memset
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: __aeabi_memset from libcms.so resolved by __aeabi_memset from extern-address space at 0x28
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for pthread_self
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: pthread_self from libcms.so resolved by pthread_self from extern-address space at 0x2c
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for memcpy
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: memcpy from libcms.so resolved by memcpy from extern-address space at 0x30
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for memset
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: memset from libcms.so resolved by memset from extern-address space at 0x34
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for malloc
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: malloc from libcms.so resolved by malloc from extern-address space at 0x38
+2020-12-02 15:06:22,291: cle.backends.externs:INFO: Created extern symbol for free
+2020-12-02 15:06:22,291: cle.backends.relocation:DEBUG: free from libcms.so resolved by free from extern-address space at 0x3c
+2020-12-02 15:06:22,292: cle.backends.externs:INFO: Created extern symbol for __aeabi_memset8
+2020-12-02 15:06:22,292: cle.backends.relocation:DEBUG: __aeabi_memset8 from libcms.so resolved by __aeabi_memset8 from extern-address space at 0x40
+2020-12-02 15:06:22,292: cle.backends.externs:INFO: Created extern symbol for raise
+2020-12-02 15:06:22,292: cle.backends.relocation:DEBUG: raise from libcms.so resolved by raise from extern-address space at 0x44
+2020-12-02 15:06:22,292: cle.backends.externs:INFO: Created extern symbol for abort
+2020-12-02 15:06:22,292: cle.backends.relocation:DEBUG: abort from libcms.so resolved by abort from extern-address space at 0x48
+2020-12-02 15:06:22,292: cle.loader:WARNING: The main binary is a position-independent executable. It is being loaded with a base address of 0x400000.
+2020-12-02 15:06:22,292: cle.loader:INFO: Mapping /Users/th/source/dy_re/decode_init_0/src/libcms.so at 0x400000
+2020-12-02 15:06:22,292: cle.loader:INFO: Mapping cle##externs at 0x500000
+2020-12-02 15:06:22,296: angr.project:INFO: There are no simprocedures for missing library libm.so :(
+2020-12-02 15:06:22,296: angr.project:INFO: There are no simprocedures for missing library libdl.so :(
+2020-12-02 15:06:22,296: angr.project:INFO: There are no simprocedures for missing library liblog.so :(
+2020-12-02 15:06:22,296: angr.project:INFO: Using stub SimProcedure for unresolved __cxa_finalize
+2020-12-02 15:06:22,296: angr.project:DEBUG: hooking 0x500004 with <SimProcedure __cxa_finalize (stub)>
+2020-12-02 15:06:22,297: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memclr4
+2020-12-02 15:06:22,297: angr.project:DEBUG: hooking 0x500008 with <SimProcedure __aeabi_memclr4 (stub)>
+2020-12-02 15:06:22,297: angr.project:INFO: Using builtin SimProcedure for unresolved __stack_chk_fail from libc.so.0
+2020-12-02 15:06:22,297: angr.project:DEBUG: hooking 0x50000c with <SimProcedure __stack_chk_fail>
+2020-12-02 15:06:22,297: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memcpy
+2020-12-02 15:06:22,297: angr.project:DEBUG: hooking 0x500010 with <SimProcedure __aeabi_memcpy (stub)>
+2020-12-02 15:06:22,297: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memclr
+2020-12-02 15:06:22,297: angr.project:DEBUG: hooking 0x500014 with <SimProcedure __aeabi_memclr (stub)>
+2020-12-02 15:06:22,297: angr.project:INFO: Using stub SimProcedure for unresolved __errno
+2020-12-02 15:06:22,298: angr.project:DEBUG: hooking 0x500018 with <SimProcedure __errno (stub)>
+2020-12-02 15:06:22,298: angr.project:INFO: Using stub SimProcedure for unresolved __system_property_find
+2020-12-02 15:06:22,298: angr.project:DEBUG: hooking 0x50001c with <SimProcedure __system_property_find (stub)>
+2020-12-02 15:06:22,298: angr.project:INFO: Using stub SimProcedure for unresolved __system_property_read
+2020-12-02 15:06:22,298: angr.project:DEBUG: hooking 0x500020 with <SimProcedure __system_property_read (stub)>
+2020-12-02 15:06:22,298: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memclr8
+2020-12-02 15:06:22,298: angr.project:DEBUG: hooking 0x500024 with <SimProcedure __aeabi_memclr8 (stub)>
+2020-12-02 15:06:22,298: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memset
+2020-12-02 15:06:22,298: angr.project:DEBUG: hooking 0x500028 with <SimProcedure __aeabi_memset (stub)>
+2020-12-02 15:06:22,298: angr.project:INFO: Using stub SimProcedure for unresolved pthread_self
+2020-12-02 15:06:22,299: angr.project:DEBUG: hooking 0x50002c with <SimProcedure pthread_self (stub)>
+2020-12-02 15:06:22,299: angr.project:INFO: Using builtin SimProcedure for unresolved memcpy from libc.so.0
+2020-12-02 15:06:22,299: angr.project:DEBUG: hooking 0x500030 with <SimProcedure memcpy>
+2020-12-02 15:06:22,299: angr.project:INFO: Using builtin SimProcedure for unresolved memset from libc.so.0
+2020-12-02 15:06:22,299: angr.project:DEBUG: hooking 0x500034 with <SimProcedure memset>
+2020-12-02 15:06:22,299: angr.project:INFO: Using builtin SimProcedure for unresolved malloc from libc.so.0
+2020-12-02 15:06:22,300: angr.project:DEBUG: hooking 0x500038 with <SimProcedure malloc>
+2020-12-02 15:06:22,300: angr.project:INFO: Using builtin SimProcedure for unresolved free from libc.so.0
+2020-12-02 15:06:22,300: angr.project:DEBUG: hooking 0x50003c with <SimProcedure free>
+2020-12-02 15:06:22,300: angr.project:INFO: Using stub SimProcedure for unresolved __aeabi_memset8
+2020-12-02 15:06:22,300: angr.project:DEBUG: hooking 0x500040 with <SimProcedure __aeabi_memset8 (stub)>
+2020-12-02 15:06:22,300: angr.project:INFO: Using builtin SimProcedure for unresolved raise from libc.so.0
+2020-12-02 15:06:22,300: angr.project:DEBUG: hooking 0x500044 with <SimProcedure raise (stub)>
+2020-12-02 15:06:22,301: angr.project:INFO: Using builtin SimProcedure for unresolved abort from libc.so.0
+2020-12-02 15:06:22,301: angr.project:DEBUG: hooking 0x500048 with <SimProcedure abort>
+2020-12-02 15:06:22,301: angr.project:INFO: There are no simprocedures for missing library libm.so :(
+2020-12-02 15:06:22,301: angr.project:INFO: There are no simprocedures for missing library libdl.so :(
+2020-12-02 15:06:22,301: angr.project:INFO: There are no simprocedures for missing library liblog.so :(
+2020-12-02 15:06:22,301: cle.loader:INFO: Linking cle##externs
+2020-12-02 15:06:22,301: cle.loader:INFO: Mapping cle##externs at 0x600000
+2020-12-02 15:06:22,301: angr.project:DEBUG: hooking 0xb01000 with <SimProcedure LinuxLoader>
+2020-12-02 15:06:22,301: angr.project:DEBUG: hooking 0xb01008 with <SimProcedure _dl_rtld_lock_recursive>
+2020-12-02 15:06:22,302: angr.project:DEBUG: hooking 0xb01010 with <SimProcedure _dl_rtld_unlock_recursive>
+2020-12-02 15:06:22,302: angr.project:DEBUG: hooking 0xb01018 with <SimProcedure _dl_initial_error_catch_tsd>
+2020-12-02 15:06:22,302: angr.project:DEBUG: hooking 0xb01020 with <SimProcedure _vsyscall>
+2020-12-02 15:06:22,302: cle.loader:INFO: Linking cle##tls
+2020-12-02 15:06:22,303: cle.loader:INFO: Mapping cle##tls at 0x700000
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xffff0fc0 with <SimProcedure _kuser_cmpxchg>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xffff0f60 with <SimProcedure _kuser_cmpxchg64>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xffff0fe0 with <SimProcedure _kuser_helper_get_tls>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xffff0ffc with <SimProcedure _kuser_helper_version>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xffff0fa0 with <SimProcedure _kuser_memory_barrier>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xb01030 with <SimProcedure CallReturn>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xb01038 with <SimProcedure UnresolvableJumpTarget>
+2020-12-02 15:06:22,303: angr.project:DEBUG: hooking 0xb01040 with <SimProcedure UnresolvableCallTarget>
+2020-12-02 15:06:22,304: cle.loader:INFO: Mapping cle##kernel at 0x800000

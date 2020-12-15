@@ -1,0 +1,19 @@
+* Run
+#+BEGIN_SRC python
+python3 -m src.remove_rubbish_code
+#+END_SRC
+
+* Links
+https://github.com/programa-stic/barf-project
+
+https://github.com/angr/angr
+
+https://www.keystone-engine.org/docs/
+
+https://github.com/keystone-engine/keystone
+
+
+* Note
+satisfiability modulo theories (SMT)
+
+** what is a jump??
