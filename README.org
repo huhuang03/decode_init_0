@@ -1,6 +1,7 @@
 * Run
 #+BEGIN_SRC python
 python3 -m src.remove_rubbish_code
+python3 -m src.remove_ollvm
 #+END_SRC
 
 * Links
