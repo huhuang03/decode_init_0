@@ -16,21 +16,3 @@ rubbish2.write(out_folder)
 
 out_path = os.path.join(out_folder, "libcms_removed_rubbilish1.so")
 open(out_path, "wb").write(out_content)
-
-# p = angr.Project(SO_PATH)
-# # read the .text start and end
-
-# print(p.arch)
-
-
-# INIT_0_START = 0x754c
-
-# so_barf = barf.BARF(SO_PATH)
-
-# # print(so_barf)
-# for addr, asm_instr, reil_instrs in so_barf.translate(INIT_0_START):
-#     print("0x{addr:08x} {instr}".format(addr=addr, instr=asm_instr))
-#     for reil_instr in reil_instrs:
-#         print("{indent:11s} {instr}".format(indent="", instr=reil_instr))
-# # cfg = so_barf.recover_cfg()
-# # cfg.save("branch1_cfg")
