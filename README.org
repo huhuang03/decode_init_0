@@ -18,4 +18,9 @@ https://docs.angr.io/
 * Note
 satisfiability modulo theories (SMT)
 
-** what is a jump??
+** the suspiciously function
+At 0x7f4a, called the suspiciously function. 我将使用ida去看看是不是这个方法有做检测。
+
+But can I use ida to debug .init_0?? After did some research. I find that need an ro.debuggable=1's device.
+
+So wait.
