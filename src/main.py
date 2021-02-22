@@ -1,6 +1,15 @@
 import os
 import os.path as path
 import barf
+from .func import Func
+
+# This is the function be called by many place
+# This function do the logic(decompress, deny check and so on)
+init_if_need = Func('init_if_need', 0x8004c)
+
+
+# This magic jump is very intreasting.
+magic_jump = Func('magic_jump', 0x23b4)
 
 SO_PATH = path.join(path.dirname(path.abspath(__file__)), "libcms.so")
 

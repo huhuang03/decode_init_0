@@ -1,3 +1,5 @@
+Don't anylysis any more. Just for backup.
+
 #+BEGIN_SRC 
                         LAB_00007f38                                    XREF[1]:     00007ee0(j)  
 00007f38 a7 f1 a2 04     sub.w      r4,r7,#0xa2

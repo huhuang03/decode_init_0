@@ -4,6 +4,12 @@ python3 -m src.remove_rubbish_code
 python3 -m src.remove_ollvm
 #+END_SRC
 
+** Or debug
+#+BEGIN_SRC
+ipython3
+from src.remove_ollvm import *
+#+END_SRC
+
 * Links
 https://github.com/programa-stic/barf-project
 
@@ -14,6 +20,8 @@ https://www.keystone-engine.org/docs/
 https://github.com/keystone-engine/keystone
 
 https://docs.angr.io/
+
+[[https://github.com/cq674350529/deflat][Look like the bloger's github]]
 
 * Note
 satisfiability modulo theories (SMT)
