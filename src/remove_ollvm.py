@@ -26,4 +26,4 @@ func_called_by_init_if_need = CalledByInitIfNeed()
 
 init_0 = Init0(p)
 init_0.initial()
-init_0.symbol_execute()
+init_0.debug_execute()
