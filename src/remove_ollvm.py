@@ -26,4 +26,12 @@ func_called_by_init_if_need = CalledByInitIfNeed()
 
 init_0 = Init0(p)
 init_0.initial()
-init_0.debug_execute()
+nodes = init_0.keep_ex_nodes
+jumps = [n.jumps for n in nodes]
+# bs = [n.is_last_jump() for n in nodes]
+# print(bs)
+# sm = init_0.symbol_execute()
+# # init_0.debug_execute()
+
+# trace = init_0.symbol_execute_always_choice_first()
+# print(trace)

@@ -1,3 +1,4 @@
+from src.util.util_reg import get_reg_as_str
 from ..llvm_function import LlvmFunction
 import angr
 
@@ -22,20 +23,22 @@ class print_hook(angr.SimProcedure):
         # pass
         # return self.state.solver.BVS("flag", 64, explicit_name=True)
 
-class print_call_init_if_nned(angr.SimProcedure):
+class hook_first_call_init_if_need(angr.SimProcedure):
     def run(self, str, end, base):
         s = self.state
-        print(f'path: {s.regs.r2}')
-        print("init_if_need called")
+        print('hook_first_call_init_if_need')
+        print(f'r0: {s.regs.r0}, r1: {s.regs.r1}, r2: {s.regs.r2}, r3: {s.regs.r3}')
+        print(f'r4: {s.regs.r4}, str(r4): {get_reg_as_str(s, s.regs.r4)}, sp: {s.regs.sp}')
+        # print(f'path: {s.regs.r2}')
         exit()
 
 class Init0(LlvmFunction):
     def __init__(self, p: angr.Project) -> None:
-        super().__init__("init_0", 0x754c, 0xb7b7, p)
+        super().__init__("init_0", 0x754c, 0x884f, p)
 
     def debug_execute(self):
         self.p.hook(0x7f5e, print_hook())
-        self.p.hook(0x7f4a, print_call_init_if_nned())
+        self.p.hook(0x7f4a, hook_first_call_init_if_need())
 
         def set_callless_to_state(s) -> bool: 
             s.options.add(angr.sim_options.CALLLESS)
