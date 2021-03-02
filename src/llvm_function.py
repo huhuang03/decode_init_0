@@ -7,6 +7,39 @@ import networkx
 from . import util
 from termcolor import colored
 from .ex_node import ExNode
+from .node_tree import NodeTreeNode
+import sys
+
+class TailRecurseException(BaseException):
+    def __init__(self, args, kwargs):
+        self.args = args
+        self.kwargs = kwargs
+
+
+def tail_call_optimized(g):
+    """
+    This function decorates a function with tail call
+    optimization. It does this by throwing an exception
+    if it is it's own grandparent, and catching such
+    exceptions to fake the tail call optimization.
+
+    This function fails if the decorated5
+    function recurses in a non-tail context.
+    """
+    def func(*args, **kwargs):
+        f = sys._getframe()
+        if f.f_back and f.f_back.f_back and f.f_back.f_back.f_code == f.f_code:
+            raise TailRecurseException(args, kwargs)
+        else:
+            while 1:
+                try:
+                    return g(*args, **kwargs)
+                except TailRecurseException as e:
+                    args = e.args
+                    kwargs = e.kwargs
+
+    func.__doc__ = g.__doc__
+    return func
 
 # bad name
 def set_callless_to_state(s) -> bool: 
@@ -113,7 +146,6 @@ class LlvmFunction(Func):
         """
         """
         insns = self.p.factory.block(n.addr).capstone.insns
-        # util.node_print_insns(self.p, n)
         if util.insns_any_startsw_with(insns, 'add sp') and util.insns_any_startsw_with(insns,'nop') \
             and (not util.insns_any_startsw_with(insns, 'sub sp')):
             return True
@@ -130,6 +162,7 @@ class LlvmFunction(Func):
     def is_state_return(self, state):
         return state.addr == self.retn_node.addr
 
+
     def get_state_list(self, s):
         history = s.history
         rst = []
@@ -140,10 +173,7 @@ class LlvmFunction(Func):
         rst.reverse()
         return [p.__repr__() for p in rst]
 
-    # def sample_execute_fist_active(state):
-    #     # rst = []
-    #     # cur_state = state.one_active
-    
+
     def symbol_execute_always_choice_first(self):
         """
         return the execute flow
@@ -165,18 +195,120 @@ class LlvmFunction(Func):
 
     def _symbol_execute_selector(self, state):
         state.options.add(angr.sim_options.CALLLESS)
+        return True
         return not self.is_state_return(state)
 
-    def _create_start_state(self):
+    def _create_start_state(self) -> angr.SimState:
         return self.p.factory.blank_state(addr=self.start + 1, option=[angr.sim_options.CALLLESS])
+
+    def trim_node_tree(self, root: NodeTreeNode):
+        while True:
+            # print(f"before delete node")
+            # root.dump(3)
+            one = self.find_node_tree_other(root)
+            if one:
+                util.assert_msg(one.parent, f"why node {one.node.addr} parent is None")
+                one.parent.flat_child(one)
+            else:
+                break
+
+    def find_node_tree_other(self, node: NodeTreeNode):
+        if node is None:
+            return None
+        if not self.is_tree_node_keep(node):
+            print(f'find_node_tree_other find one: {node.node}')
+            return node
+        for c in node.children:
+            find = self.find_node_tree_other(c)
+            if find is not None:
+                return find
+        return None
+
+    def is_tree_node_keep(self, node: NodeTreeNode) -> bool:
+        rst = False
+        for n in self.keep_ex_nodes:
+            # why not right here??
+            if n.node.addr == node.node.addr:
+                rst = True
+                break
+        print(f'check node: {hex(node.node.addr)}, rst: {rst}')
+        return rst
+
+
+    def symbol_execute2(self):
+        """
+        return an execute tree.
+        """
+        start_s = self._create_start_state()
+        root = NodeTreeNode(None)
+        # self.symbol_execute2_single(root, start_s)
+        self.symbol_execute2_single_tail([NodeStatePair(root, start_s)])
+        return root
+
+
+    def symbol_execute2_single(self, cur_node: NodeTreeNode, s):
+        cur_node.node = self.get_node_at(s.addr)
+        for s in s.step().successors:
+            child_node = cur_node.add_child(None)
+            # 这里不是尾递归吗？
+            self.symbol_execute2_single(child_node, s)
+
+    @tail_call_optimized
+    def symbol_execute2_single_tail(self, pairs):
+        # print(f'pairs len: {len(pairs)}')
+        print([s.state for s in pairs])
+        next_pairs = []
+        if len(pairs) == 0:
+            return
+
+        for pair in pairs:
+            s = pair.state
+            s.options.add(angr.sim_options.CALLLESS)
+            n = pair.node
+            n.node = self.get_node_at(s.addr)
+            if s.addr == self.retn_node.addr:
+                continue
+
+            for ns in s.step().successors:
+                nc = n.add_child(None)
+                next_pairs.append(NodeStatePair(nc, ns))
+        self.symbol_execute2_single_tail(next_pairs)
+
+
+    def get_ex_node_at(self, addr):
+        return util.nodes_get_node_at(self.keep_ex_nodes, addr)
+
+    def get_node_at(self, addr):
+        return util.nodes_get_node_at(self.supergraph.nodes, addr)
+
 
     def symbol_execute1(self):
         """
+        what's this??
+        Now we don't take care of itt, just link to last.
         """
         pending_s = []
-        start_s = self._creat_init_state()
+        start_s = self._create_start_state()
+        pending_s.append(start_s)
 
-        pass
+        while len(pending_s) > 0:
+            new_s = []
+            for s in pending_s:
+                cur_node = util.nodes_get_node_at(self.keep_ex_nodes, s.addr)
+                util.assert_msg(cur_node, f"Why can't get node at: {hex(s.addr)}")
+                step_rst = s.step(selector_func=self._symbol_execute_selector)
+                for next_s in step_rst.successors:
+                    # like the main_dispather. find is none
+                    exnode = util.nodes_get_node_at(self.keep_ex_nodes, next_s.addr)
+                    if exnode:
+                        cur_node.successors.add(exnode)
+                        if not self.is_ex_node_end(self, exnode):
+                            new_s.append(next_s)
+            pending_s.clear()
+            pending_s.extend(new_s)
+
+    def is_ex_node_end(self, ex_node: ExNode)-> bool: 
+        return ex_node.addr == self.retn_node.addr
 
     def symbol_execute(self):
         """
@@ -214,3 +346,19 @@ class LlvmFunction(Func):
             sm.step(selector_func=self._symbol_execute_selector)
 
         return sm
+
+
+class GeneratorExecuteTest():
+    def __init__(self) -> None:
+        pass
+    
+    def next():
+        pass
+
+class NodeStatePair:
+    def __init__(self, node, state) -> None:
+        self.node = node
+        self.state = state
+
+    def __str__(self) -> str:
+        return f'n: {self.node}, s: {self.state}'

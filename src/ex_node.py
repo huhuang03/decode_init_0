@@ -13,7 +13,9 @@ class ExNode:
         self.jump_table = []
         self.insts = self.p.factory.block(node.addr).capstone.insns
         self.jumps = []
-        self.successors = []
+        self.successors = set()
+        self.cfg_nodes = node.cfg_nodes
+        self.addr = node.addr
 
         for n in self.insts:
             if n.mnemonic.startswith('b'):
@@ -37,6 +39,5 @@ class ExNode:
         return has_nop and has_add_sp and not has_sub_sp
 
 
-
     def __eq__(self, o: object) -> bool:
-        return o is ExNode and self.node == o.node
+        return isinstance(0, ExNode) and self.node == o.node

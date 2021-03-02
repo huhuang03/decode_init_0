@@ -26,8 +26,10 @@ func_called_by_init_if_need = CalledByInitIfNeed()
 
 init_0 = Init0(p)
 init_0.initial()
-nodes = init_0.keep_ex_nodes
-jumps = [n.jumps for n in nodes]
+init_0_root = init_0.symbol_execute2()
+init_0.trim_node_tree(init_0_root)
+# nodes = init_0.keep_ex_nodes
+# jumps = [n.jumps for n in nodes]
 # bs = [n.is_last_jump() for n in nodes]
 # print(bs)
 # sm = init_0.symbol_execute()
